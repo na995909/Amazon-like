@@ -9,4 +9,4 @@ Packages needed fo the ap to input data and store it
 
 In this app,the user can choose which item to purchase by ID.
 After inputting an appropriate quantity, the quantity will depelete available quantity for a product and also update the appropriate table with sales
-Below attached Link to the video:
+Below attached Link to the video: [Screen recording](https://github.com/na995909/Amazon-like/blob/master/Screen%20Recording.mov?raw=true)
