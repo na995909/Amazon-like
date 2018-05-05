@@ -1,7 +1,6 @@
 
 var mysql = require('mysql');
 var inquirer = require('inquirer');
-var itemId = [];
 var items;
 //create connection to DB
 var con = mysql.createConnection({
@@ -48,7 +47,7 @@ function firstPrompt(){
           console.log("Please insert valid ID from the list above!!!");
           return false;
         }
-        var res = false;
+
         for (var i = 0; i < items.length; i++) {
 
           if(items[i].ID == value){
@@ -88,7 +87,7 @@ function firstPrompt(){
           return;
       }
       var new_quantity = item.stock_quantity - answer.Q;
-      var query = con.query("UPDATE products SET ? WHERE?",[{stock_quantity:new_quantity},{id:answer.ID}] , function(err, res) {
+      var query = con.query("UPDATE products SET ? WHERE ?",[{stock_quantity:new_quantity},{id:answer.ID}] , function(err, res) {
        if (err) throw err;  
        console.log("Your total is $" + answer.Q * item.price);
       reload();
